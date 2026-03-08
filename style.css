@@ -1,0 +1,199 @@
+/*
+Theme Name: AHX WP Lean
+Theme URI: http://example.com
+Author: Alexander Herbst
+Author URI: http://example.com
+Description: Ein einfaches, responsives Lean-Theme mit Navigation bis Ebene 2.
+Version: v1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ahx_wp_lean
+*/
+
+/* Allgemeines Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+}
+.site-footer {
+    padding: 10px 20px;
+}
+.site-title a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.container-content {
+    padding: 10px 20px;
+}
+
+/* Menü Styling */
+.nav-menu {
+    position: relative;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    z-index: 999999;
+}
+
+.menu-list li {
+    position: relative;
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-list .sub-menu,
+.menu-list .children {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    background: #333;
+    z-index: 1000000;
+}
+
+.menu-list .sub-menu li,
+.menu-list .children li {
+    width: 100%;
+}
+
+.menu-list .sub-menu a,
+.menu-list .children a {
+    display: block;
+    padding: 8px 12px;
+}
+
+.menu-list li:hover > .sub-menu,
+.menu-list li:focus-within > .sub-menu,
+.menu-list li:hover > .children,
+.menu-list li:focus-within > .children {
+    display: block;
+}
+
+/* Burger-Menü Styling */
+#burger-menu {
+    display: none;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    #burger-menu {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .menu-list a {
+        color: black;
+        padding: 10px;
+        display: block;
+    }
+
+    .menu-list .sub-menu,
+    .menu-list .children {
+        display: block;
+        position: static;
+        min-width: 0;
+        background: transparent;
+        padding: 0;
+        margin-left: 12px;
+    }
+
+    .menu-list .sub-menu a,
+    .menu-list .children a {
+        color: black;
+        padding: 8px 10px;
+    }
+
+    .menu-list.show {
+        display: flex;
+    }
+}
+
+#process-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* transluzenter Hintergrund */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.overlay-content {
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    padding: 30px 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.overlay-icon {
+    width: 60px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #0073aa; /* WordPress primary color */
+}
+
+.overlay-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.overlay-spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #0073aa;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
