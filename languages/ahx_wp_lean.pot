@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ahx_wp_lean\n"
+"POT-Creation-Date: 2026-03-14 12:37+0000\n"
+"MIME-Version: 1.0\n\"\n"Content-Type: text/plain; charset=UTF-8\n\"\n"Content-Transfer-Encoding: 8bit\n\"\n
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Abmelden"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Anmelden"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/404.php
+msgid "Die gesuchte Seite konnte nicht gefunden werden. Versuche es mit der Suche oder geh zurück zur Startseite."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Hauptmenü"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/single.php
+msgid "Kein Beitrag gefunden."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/archive.php
+msgid "Keine Beiträge gefunden."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/page.php
+msgid "Keine Seite gefunden."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/header.php
+msgid "Menü"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Profil bearbeiten"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/404.php
+msgid "Seite nicht gefunden"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Startseite"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/header.php
+msgid "Zum Inhalt springen"
+msgstr ""
+

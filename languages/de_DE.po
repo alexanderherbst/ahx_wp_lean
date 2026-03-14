@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AHX WP Lean\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-14 00:00+0000\n"
+"PO-Revision-Date: 2026-03-14 00:00+0000\n"
+"Last-Translator: Example Translator <translator@example.com>\n"
+"Language-Team: German <translator@example.com>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Beispiel-Übersetzungen
+msgid "Hauptmenü"
+msgstr "Hauptmenü"
+
+msgid "Profil bearbeiten"
+msgstr "Profil bearbeiten"
+
+msgid "Abmelden"
+msgstr "Abmelden"
+
+msgid "Anmelden"
+msgstr "Anmelden"
+
+msgid "Zurück zur Startseite"
+msgstr "Zurück zur Startseite"
+
+msgid "Menü"
+msgstr "Menü"
+
+msgid "Zum Inhalt springen"
+msgstr "Zum Inhalt springen"
+
+msgid "Startseite"
+msgstr "Startseite"
+
+msgid "Kein Beitrag gefunden."
+msgstr "Kein Beitrag gefunden."
+
+msgid "Keine Seite gefunden."
+msgstr "Keine Seite gefunden."
+
+msgid "Keine Beiträge gefunden."
+msgstr "Keine Beiträge gefunden."
+
+msgid "Seite nicht gefunden"
+msgstr "Seite nicht gefunden"
+
+msgid "Die gesuchte Seite konnte nicht gefunden werden. Versuche es mit der Suche oder geh zurück zur Startseite."
+msgstr "Die gesuchte Seite konnte nicht gefunden werden. Versuche es mit der Suche oder gehe zurück zur Startseite."
