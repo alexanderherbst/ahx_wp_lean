@@ -23,7 +23,7 @@
     
 </script>
 
-<main class="site-main">
+<main id="content" class="site-main">
     <div class="container">
         <?php
         if (have_posts()) :

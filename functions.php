@@ -39,6 +39,47 @@ function ahx_nav_menu_items($items, $args) {
 }
 add_filter('wp_nav_menu_items', 'ahx_nav_menu_items', 10, 2);
 
+// Beim Theme-Aktivieren: Default-Menu anlegen und Location zuweisen
+function ahx_create_default_menu_on_activation() {
+    // Wenn bereits ein Menü zur Location gesetzt ist, nichts tun
+    if ( has_nav_menu('main-menu') ) {
+        return;
+    }
+
+    $menu_name = __('Hauptmenü', 'ahx_wp_lean');
+    $existing = wp_get_nav_menu_object($menu_name);
+
+    if (!$existing) {
+        $menu_id = wp_create_nav_menu($menu_name);
+        if (!is_wp_error($menu_id)) {
+            // Startseite als erster Menüpunkt
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' => __('Startseite', 'ahx_wp_lean'),
+                'menu-item-url' => home_url('/'),
+                'menu-item-status' => 'publish'
+            ));
+
+            // Menu-Location zuweisen
+            $locations = get_theme_mod('nav_menu_locations');
+            if (!is_array($locations)) {
+                $locations = array();
+            }
+            $locations['main-menu'] = $menu_id;
+            set_theme_mod('nav_menu_locations', $locations);
+        }
+    } else {
+        // Falls ein Menü mit dem Namen existiert, Location sicherstellen
+        $menu_id = $existing->term_id;
+        $locations = get_theme_mod('nav_menu_locations');
+        if (!is_array($locations)) {
+            $locations = array();
+        }
+        $locations['main-menu'] = $menu_id;
+        set_theme_mod('nav_menu_locations', $locations);
+    }
+}
+add_action('after_switch_theme', 'ahx_create_default_menu_on_activation');
+
 // Fallback: Seitenliste (verschachtelt) wenn kein Menü angelegt ist
 function ahx_page_menu_fallback($args) {
     $menu_items = wp_list_pages([
