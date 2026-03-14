@@ -19,6 +19,28 @@ body {
     color: black;
 }
 
+/* Skip link: nur sichtbar beim Fokus (A11Y) */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus,
+.skip-link:active {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    background: #0073aa;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 10000;
+    text-decoration: none;
+}
+
 /* Header */
 .site-header {
     display: flex;
@@ -75,6 +97,13 @@ body {
     padding: 8px 0;
     background: #333;
     z-index: 1000000;
+}
+
+/* When mobile menu is expanded, ensure nested lists are visible */
+.menu-list.show .sub-menu,
+.menu-list.show .children {
+    display: block;
+    position: static;
 }
 
 .menu-list .sub-menu li,
