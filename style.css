@@ -226,3 +226,31 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.privacy-policy {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.privacy-group {
+    margin: 24px 0;
+    padding: 16px 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.privacy-group h2 {
+    margin-top: 0;
+}
+
+.privacy-group h3 {
+    margin-top: 20px;
+}
+
+.privacy-disclaimer {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px dashed #c9c9c9;
+}
