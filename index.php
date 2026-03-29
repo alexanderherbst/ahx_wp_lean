@@ -36,7 +36,7 @@
                 <?php
             endwhile;
         else :
-            echo '<p>Keine Inhalte gefunden.</p>';
+            echo '<p>' . esc_html__('Keine Inhalte gefunden.', 'ahx_wp_lean') . '</p>';
         endif;
         ?>
     </div>

@@ -1,14 +1,118 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ahx_wp_lean\n"
-"POT-Creation-Date: 2026-03-14 12:37+0000\n"
+"POT-Creation-Date: 2026-03-15 11:44+0000\n"
 "MIME-Version: 1.0\n\"\n"Content-Type: text/plain; charset=UTF-8\n\"\n"Content-Transfer-Encoding: 8bit\n\"\n
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "1. Basis & Kontakt"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "1. Basisangaben"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "2. Inhalte (Checkliste)"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "2. Verarbeitung auf dieser Website"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "3. Dienstleister"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "3. Speicherung, Weitergabe und Rechte"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "4. Ausgabe & Hinweis"
+msgstr ""
+
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "Abmelden"
 msgstr ""
 
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Analytics-Anbieter"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Anbieter für eingebettete Inhalte (optional)"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "Anmelden"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Anschrift (optional)"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Aus deiner E-Mail-Adresse kann eine anonymisierte Zeichenfolge erstellt (auch Hash genannt) und dem Gravatar-Dienst übergeben werden, um zu prüfen, ob du diesen benutzt. Die Datenschutzerklärung des Gravatar-Dienstes findest du hier: https://automattic.com/privacy/. Nachdem dein Kommentar freigegeben wurde, ist dein Profilbild öffentlich im Kontext deines Kommentars sichtbar."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Automatisierte Spam-Erkennung"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Beispiel: YouTube, Vimeo, Google Fonts"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Beispiel: datenschutz => /datenschutz/"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Beiträge auf dieser Website können eingebettete Inhalte beinhalten (z. B. Videos, Bilder, Beiträge etc.). Eingebettete Inhalte von anderen Websites verhalten sich exakt so, als ob du die andere Website besucht hättest."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Benutzerkonten und Login"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Besucher-Kommentare könnten von einem automatisierten Dienst zur Spam-Erkennung untersucht werden."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Bitte Anbieter manuell eintragen."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Bitte auswählen"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Cookies"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Das aktive Theme <strong>ahx_wp_lean</strong> generiert die Datenschutzerklärung automatisch und stellt sie unter <code>/?ahx_privacy=1</code> bereit. Eine separate WordPress-Datenschutzseite ist daher nicht erforderlich. Alle Inhalte können im <a href=\"%s\">Design &rarr; Anpassen &rarr; Datenschutz-Einstellungen</a> gepflegt werden."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/footer.php C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Datenschutz"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Datenschutz-Link im Footer anzeigen"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Datenschutzerklärung"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Datenschutzerklärung wird vom Theme verwaltet"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Die Adresse unserer Website ist: "
 msgstr ""
 
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/404.php
@@ -16,7 +120,79 @@ msgid "Die gesuchte Seite konnte nicht gefunden werden. Versuche es mit der Such
 msgstr ""
 
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Diese Websites können Daten über dich sammeln, Cookies benutzen, zusätzliche Tracking-Dienste von Dritten einbetten und deine Interaktion mit dem eingebetteten Inhalt aufzeichnen, inklusive deiner Interaktion mit dem eingebetteten Inhalt, falls du ein Konto hast und auf dieser Website angemeldet bist."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Disclaimer-Block anzeigen"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Disclaimer-Text"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "E-Mail: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Eingebettete Inhalte (z. B. YouTube, externe Fonts)"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Eingebettete Inhalte von anderen Websites"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Eingesetzte Anbieter: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Eingesetzter Hosting-Dienstleister: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Eingesetzter Kartendienst: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Eingesetzter Spam-Erkennungsdienst: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Eingesetztes Analyse-Tool / Dienstleister: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Einstellungen für die automatisch erzeugte Datenschutzerklärung."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Falls du ein Konto hast und dich auf dieser Website anmeldest, setzen wir ein temporäres Cookie, um festzustellen, ob dein Browser Cookies akzeptiert. Dieses Cookie enthält keine personenbezogenen Daten und wird verworfen, wenn du deinen Browser schließt."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Für Benutzer, die sich auf unserer Website registrieren, speichern wir zusätzlich die persönlichen Informationen, die sie in ihren Benutzerprofilen angeben. Alle Benutzer können jederzeit ihre persönlichen Informationen einsehen, verändern oder löschen (der Benutzername kann nicht verändert werden). Administratoren der Website können diese Informationen ebenfalls einsehen und verändern."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "Hauptmenü"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Hinweis: Diese automatisch erzeugte Vorlage ersetzt keine individuelle Rechtsberatung."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Hosting-Dienstleister"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Kartendienste"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Kartendienste (z. B. Google Maps)"
 msgstr ""
 
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/single.php
@@ -27,12 +203,72 @@ msgstr ""
 msgid "Keine Beiträge gefunden."
 msgstr ""
 
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/index.php
+msgid "Keine Inhalte gefunden."
+msgstr ""
+
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/page.php
 msgid "Keine Seite gefunden."
 msgstr ""
 
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Kommentare"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Kommentarfunktion"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Konkret benannte Dienstleister: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Kontakt-E-Mail"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Kontaktformular und Kontakt per E-Mail"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Kontaktformulare und E-Mail"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Maps-Anbieter"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Marketing-/Tracking-Cookies"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Medien"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Medien-Uploads (EXIF/GPS-Metadaten)"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Mehrfachauswahl möglich."
+msgstr ""
+
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/header.php
 msgid "Menü"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Mit wem wir deine Daten teilen"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Newsletter"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Nicht notwendige Cookies für Marketing oder Tracking setzen wir nur mit deiner ausdrücklichen Einwilligung. Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen."
 msgstr ""
 
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
@@ -44,10 +280,162 @@ msgid "Seite nicht gefunden"
 msgstr ""
 
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Seitentitel"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Seitentitel auf dieser Seite ausblenden"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Server-Logfiles"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Server-Logfiles beim Hosting"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Slug für Datenschutz-Seite"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Sonstiger"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Sonstiger Hosting-Dienstleister"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Sonstiger Kartendienst"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Sonstiger Spam-Erkennungsdienst"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Sonstiges Analytics-Tool"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Spam-Anbieter"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Stand: "
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "Startseite"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Technisch notwendige Cookies"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Top 10 Anbieter in Deutschland plus Sonstiger."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Verantwortliche Person / Betreiber"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Verantwortliche Stelle"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Webanalyse"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Webanalyse (z. B. Matomo/Google Analytics)"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Welche Rechte du an deinen Daten hast"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn Besucher Kommentare auf der Website schreiben, sammeln wir die Daten, die im Kommentar-Formular angezeigt werden, außerdem die IP-Adresse des Besuchers und den User-Agent-String (damit wird der Browser identifiziert), um die Erkennung von Spam zu unterstützen."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du dich anmeldest, richten wir einige Cookies ein, um deine Anmeldeinformationen und Anzeigeoptionen zu speichern. Anmelde-Cookies verfallen nach zwei Tagen und Cookies für die Anzeigeoptionen nach einem Jahr. Falls du bei der Anmeldung „Angemeldet bleiben“ auswählst, wird deine Anmeldung zwei Wochen lang aufrechterhalten. Mit der Abmeldung aus deinem Konto werden die Anmelde-Cookies gelöscht."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du dich für unseren Newsletter anmeldest, verarbeiten wir deine E-Mail-Adresse und ggf. weitere freiwillige Angaben auf Grundlage deiner Einwilligung."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du diese Website besuchst, erhebt der Hoster automatisch technische Daten (z. B. IP-Adresse, Datum und Uhrzeit, Browser, Betriebssystem, Referrer und aufgerufene URL). Das ist notwendig, um die Website stabil und sicher bereitzustellen."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du ein Konto auf dieser Website besitzt oder Kommentare geschrieben hast, kannst du einen Export deiner personenbezogenen Daten bei uns anfordern, inklusive aller Daten, die du uns mitgeteilt hast. Darüber hinaus kannst du die Löschung aller personenbezogenen Daten, die wir von dir gespeichert haben, anfordern. Dies umfasst nicht die Daten, die wir aufgrund administrativer, rechtlicher oder sicherheitsrelevanter Notwendigkeiten aufbewahren müssen."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du ein registrierter Benutzer bist und Fotos auf diese Website lädst, solltest du vermeiden, Fotos mit einem EXIF-GPS-Standort hochzuladen. Besucher dieser Website könnten Fotos, die auf dieser Website gespeichert sind, herunterladen und deren Standort-Informationen extrahieren."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du eine Zurücksetzung des Passworts beantragst, wird deine IP-Adresse in der E-Mail zur Zurücksetzung enthalten sein."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du einen Artikel bearbeitest oder veröffentlichst, wird ein zusätzlicher Cookie in deinem Browser gespeichert. Dieser Cookie enthält keine personenbezogenen Daten und verweist nur auf die Beitrags-ID des Artikels, den du gerade bearbeitet hast. Der Cookie verfällt nach einem Tag."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du einen Kommentar auf unserer Website schreibst, kann das eine Einwilligung sein, deinen Namen, E-Mail-Adresse und Website in Cookies zu speichern. Dies ist eine Komfortfunktion, damit du nicht, wenn du einen weiteren Kommentar schreibst, all diese Daten erneut eingeben musst. Diese Cookies werden ein Jahr lang gespeichert."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du einen Kommentar schreibst, wird dieser inklusive Metadaten zeitlich unbegrenzt gespeichert. Auf diese Art können wir Folgekommentare automatisch erkennen und freigeben, anstatt sie in einer Moderations-Warteschlange festzuhalten."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn du uns per Formular oder E-Mail kontaktierst, verarbeiten wir deine Angaben zur Bearbeitung der Anfrage."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wenn wir Webanalyse einsetzen, dient das dazu, unser Angebot technisch und inhaltlich zu verbessern."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wer wir sind"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wie lange wir deine Daten speichern"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wir speichern personenbezogene Daten nur so lange, wie das für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wohin deine Daten gesendet werden"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Wähle aus, welche Funktionen auf der aktuellen Website tatsächlich genutzt werden."
 msgstr ""
 
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/header.php
 msgid "Zum Inhalt springen"
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Zur Darstellung interaktiver Karten können Inhalte externer Anbieter geladen werden. Dabei können insbesondere IP-Adresse und Nutzungsdaten verarbeitet werden."
+msgstr ""
+
+#: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
+msgid "Zusätzlich setzen wir technisch notwendige Cookies, damit zentrale Funktionen der Website zuverlässig laufen."
 msgstr ""
 
