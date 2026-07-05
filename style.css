@@ -4,7 +4,7 @@ Theme URI: https://familie-herbst.net/ahx/
 Author: Alexander Herbst
 Author URI: https://ahx.familie-herbst.net/
 Description: Ein einfaches, responsives Lean-Theme mit Navigation bis Ebene 2.
-Version: v1.1.1
+Version: v1.2.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ahx_wp_lean
@@ -60,6 +60,40 @@ body {
 }
 .container-content {
     padding: 10px 20px;
+}
+
+/* Inhalt-Module in .entry-content flexibel steuern */
+.entry-content {
+    --module-outer-margin: 24px;
+}
+
+/* Standard: alle direkten Inhalte erhalten den konfigurierten Außenrand */
+.entry-content > * {
+    margin: var(--module-outer-margin);
+}
+
+/* Modul ohne zusaetzlichen aeusseren Rand */
+.entry-content .module-full,
+.entry-content .modul-voll {
+    margin: 0;
+}
+
+/* Modul mit definiertem aeusseren Rand in Pixeln */
+.entry-content .module-boxed,
+.entry-content .modul-mit-rand {
+    margin: var(--module-outer-margin);
+}
+
+/* Individueller Wert pro Modul: style="--module-outer-margin: 40px;" */
+.entry-content .module-boxed.custom-margin,
+.entry-content .modul-mit-rand.custom-margin {
+    margin: var(--module-outer-margin);
+}
+
+@media (max-width: 768px) {
+    .entry-content {
+        --module-outer-margin: 16px;
+    }
 }
 
 /* Menü Styling */

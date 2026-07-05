@@ -19,6 +19,17 @@ function ahx_lean_enqueue_assets() {
     $script_ver = file_exists($script_path) ? filemtime($script_path) : false;
     wp_enqueue_style('ahx-style', get_stylesheet_uri(), [], $style_ver);
     wp_enqueue_script('ahx-script', get_template_directory_uri() . '/script.js', [], $script_ver, true);
+
+    $margin_mode = get_theme_mod('ahx_entry_content_margin_mode', 'with_margin');
+    $margin_mode = ahx_sanitize_entry_content_margin_mode($margin_mode);
+    $margin_px = ahx_sanitize_entry_content_margin_px(get_theme_mod('ahx_entry_content_margin_px', 24));
+
+    if ($margin_mode === 'without_margin') {
+        $margin_px = 0;
+    }
+
+    $inline_css = '.entry-content{--module-outer-margin:' . absint($margin_px) . 'px;}';
+    wp_add_inline_style('ahx-style', $inline_css);
 }
 add_action('wp_enqueue_scripts', 'ahx_lean_enqueue_assets');
 
@@ -186,6 +197,69 @@ function ahx_should_show_page_title($post_id = 0) {
 function ahx_sanitize_checkbox($value) {
     return !empty($value) ? 1 : 0;
 }
+
+function ahx_sanitize_entry_content_margin_mode($value) {
+    $value = sanitize_key($value);
+    $allowed = ['with_margin', 'without_margin'];
+    return in_array($value, $allowed, true) ? $value : 'with_margin';
+}
+
+function ahx_sanitize_entry_content_margin_px($value) {
+    $value = absint($value);
+    if ($value < 0) {
+        return 0;
+    }
+    if ($value > 120) {
+        return 120;
+    }
+    return $value;
+}
+
+function ahx_show_entry_content_margin_px_control() {
+    return get_theme_mod('ahx_entry_content_margin_mode', 'with_margin') === 'with_margin';
+}
+
+function ahx_register_layout_customizer($wp_customize) {
+    $wp_customize->add_section('ahx_layout_section', [
+        'title' => __('Layout', 'ahx_wp_lean'),
+        'priority' => 35,
+        'description' => __('Abstand fuer Inhalte in .entry-content steuern.', 'ahx_wp_lean'),
+    ]);
+
+    $wp_customize->add_setting('ahx_entry_content_margin_mode', [
+        'default' => 'with_margin',
+        'sanitize_callback' => 'ahx_sanitize_entry_content_margin_mode',
+    ]);
+
+    $wp_customize->add_control('ahx_entry_content_margin_mode', [
+        'label' => __('Aeusserer Rand fuer Inhaltsmodule', 'ahx_wp_lean'),
+        'section' => 'ahx_layout_section',
+        'type' => 'radio',
+        'choices' => [
+            'with_margin' => __('Mit Rand', 'ahx_wp_lean'),
+            'without_margin' => __('Ohne Rand', 'ahx_wp_lean'),
+        ],
+    ]);
+
+    $wp_customize->add_setting('ahx_entry_content_margin_px', [
+        'default' => 24,
+        'sanitize_callback' => 'ahx_sanitize_entry_content_margin_px',
+    ]);
+
+    $wp_customize->add_control('ahx_entry_content_margin_px', [
+        'label' => __('Rand in Pixel', 'ahx_wp_lean'),
+        'description' => __('Wert von 0 bis 120 Pixel.', 'ahx_wp_lean'),
+        'section' => 'ahx_layout_section',
+        'type' => 'number',
+        'input_attrs' => [
+            'min' => 0,
+            'max' => 120,
+            'step' => 1,
+        ],
+        'active_callback' => 'ahx_show_entry_content_margin_px_control',
+    ]);
+}
+add_action('customize_register', 'ahx_register_layout_customizer');
 
 function ahx_get_hosting_provider_options() {
     return [
