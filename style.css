@@ -4,7 +4,7 @@ Theme URI: https://familie-herbst.net/ahx/
 Author: Alexander Herbst
 Author URI: https://ahx.familie-herbst.net/
 Description: Ein einfaches, responsives Lean-Theme mit Navigation bis Ebene 2.
-Version: v1.2.0
+Version: v1.3.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ahx_wp_lean
@@ -52,6 +52,21 @@ body {
 }
 .site-footer {
     padding: 10px 20px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-ahx-inventory {
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.footer-privacy-link {
+    margin-top: 10px !important;
 }
 .site-title a {
     font-size: 18px;

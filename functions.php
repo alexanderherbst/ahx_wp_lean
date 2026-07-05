@@ -1135,3 +1135,103 @@ function ahx_privacy_admin_notice() {
     <?php
 }
 add_action( 'admin_notices', 'ahx_privacy_admin_notice' );
+
+function ahx_get_footer_inventory_data() {
+    $inventory = [
+        'plugins' => [],
+        'themes' => [],
+    ];
+
+    if (!function_exists('get_plugins')) {
+        require_once ABSPATH . 'wp-admin/includes/plugin.php';
+    }
+
+    if (function_exists('get_plugins')) {
+        $plugins = get_plugins();
+        $active_plugins = (array) get_option('active_plugins', []);
+
+        if (is_multisite()) {
+            $network_active = array_keys((array) get_site_option('active_sitewide_plugins', []));
+            $active_plugins = array_unique(array_merge($active_plugins, $network_active));
+        }
+
+        foreach ($plugins as $file => $data) {
+            if (strpos($file, 'ahx_wp_') !== 0) {
+                continue;
+            }
+
+            $inventory['plugins'][] = [
+                'name' => $file,
+                'version' => isset($data['Version']) ? (string) $data['Version'] : '',
+                'active' => in_array($file, $active_plugins, true),
+            ];
+        }
+    }
+
+    $themes = wp_get_themes();
+    $active_theme = wp_get_theme();
+    $active_stylesheet = $active_theme->get_stylesheet();
+    $active_template = $active_theme->get_template();
+
+    foreach ($themes as $slug => $theme) {
+        if (strpos($slug, 'ahx_wp_') !== 0) {
+            continue;
+        }
+
+        $inventory['themes'][] = [
+            'name' => $slug,
+            'version' => (string) $theme->get('Version'),
+            'active' => ($slug === $active_stylesheet || $slug === $active_template),
+        ];
+    }
+
+    usort($inventory['plugins'], static function ($a, $b) {
+        return strcmp($a['name'], $b['name']);
+    });
+    usort($inventory['themes'], static function ($a, $b) {
+        return strcmp($a['name'], $b['name']);
+    });
+
+    return $inventory;
+}
+
+function ahx_render_footer_ahx_inventory() {
+    $inventory = ahx_get_footer_inventory_data();
+
+    $parts = [];
+
+    foreach ($inventory['plugins'] as $plugin) {
+        if (empty($plugin['active'])) {
+            continue;
+        }
+
+        $slug = (string) $plugin['name'];
+        if (strpos($slug, '/') !== false) {
+            $slug = strstr($slug, '/', true);
+        }
+
+        $parts[] = trim($slug . ' ' . (string) $plugin['version']);
+    }
+
+    foreach ($inventory['themes'] as $theme) {
+        if (empty($theme['active'])) {
+            continue;
+        }
+
+        $parts[] = trim((string) $theme['name'] . ' ' . (string) $theme['version']);
+    }
+
+    global $wp_version;
+    $parts[] = 'WordPress ' . (string) $wp_version;
+
+    $parts = array_values(array_unique(array_filter($parts)));
+
+    if (empty($parts)) {
+        return;
+    }
+
+    echo '<p class="footer-ahx-inventory">'
+        . esc_html__('Realisiert mit ', 'ahx_wp_lean')
+        . esc_html(implode(', ', $parts))
+        . '.</p>';
+}
