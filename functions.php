@@ -29,7 +29,11 @@ function ahx_lean_enqueue_assets() {
         $margin_px = 0;
     }
 
+    $featured_image_height = ahx_sanitize_featured_image_height(get_theme_mod('ahx_featured_image_height', 320));
+    $site_header_height = ahx_sanitize_site_header_height(get_theme_mod('ahx_site_header_height', 80));
+
     $inline_css = '.entry-content{--module-outer-margin:' . absint($margin_px) . 'px;}';
+    $inline_css .= ':root{--post-featured-image-height:' . $featured_image_height . 'px;--site-header-height:' . $site_header_height . 'px;}';
     wp_add_inline_style('ahx-style', $inline_css);
 }
 add_action('wp_enqueue_scripts', 'ahx_lean_enqueue_assets');
@@ -216,6 +220,16 @@ function ahx_sanitize_entry_content_margin_px($value) {
     return $value;
 }
 
+function ahx_sanitize_featured_image_height($value) {
+    $value = absint($value);
+    return min(max($value, 100), 1200);
+}
+
+function ahx_sanitize_site_header_height($value) {
+    $value = absint($value);
+    return min(max($value, 40), 300);
+}
+
 function ahx_show_entry_content_margin_px_control() {
     return get_theme_mod('ahx_entry_content_margin_mode', 'with_margin') === 'with_margin';
 }
@@ -258,6 +272,40 @@ function ahx_register_layout_customizer($wp_customize) {
             'step' => 1,
         ],
         'active_callback' => 'ahx_show_entry_content_margin_px_control',
+    ]);
+
+    $wp_customize->add_setting('ahx_featured_image_height', [
+        'default' => 320,
+        'sanitize_callback' => 'ahx_sanitize_featured_image_height',
+    ]);
+
+    $wp_customize->add_control('ahx_featured_image_height', [
+        'label' => __('Höhe des Beitragsbildes (Pixel)', 'ahx_wp_lean'),
+        'description' => __('Wert von 100 bis 1200 Pixel.', 'ahx_wp_lean'),
+        'section' => 'ahx_layout_section',
+        'type' => 'number',
+        'input_attrs' => [
+            'min' => 100,
+            'max' => 1200,
+            'step' => 1,
+        ],
+    ]);
+
+    $wp_customize->add_setting('ahx_site_header_height', [
+        'default' => 80,
+        'sanitize_callback' => 'ahx_sanitize_site_header_height',
+    ]);
+
+    $wp_customize->add_control('ahx_site_header_height', [
+        'label' => __('Höhe des Headers (Pixel)', 'ahx_wp_lean'),
+        'description' => __('Wert von 40 bis 300 Pixel.', 'ahx_wp_lean'),
+        'section' => 'ahx_layout_section',
+        'type' => 'number',
+        'input_attrs' => [
+            'min' => 40,
+            'max' => 300,
+            'step' => 1,
+        ],
     ]);
 }
 add_action('customize_register', 'ahx_register_layout_customizer');

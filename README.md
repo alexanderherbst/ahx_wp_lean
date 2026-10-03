@@ -24,6 +24,8 @@ Kleines, responsives WordPress-Theme mit Fokus auf Einfachheit, Zugänglichkeit 
 
 - Übersetzungen: `load_theme_textdomain()` ist vorhanden; PO/POT-Dateien legen Sie in `languages/` ab.
 - Für Produktionsbetrieb: CSS/JS minifizieren und Bilder optimieren (WebP, srcset).
+- Das Beitragsbild erscheint auf statischen Seiten (`page.php`) als vollbreite Grafik. Die Höhe lässt sich über `--post-featured-image-height` in `style.css` festlegen (Standard: `320px`); das Bild wird bei Bedarf mittig zugeschnitten. Ist der Seitentitel sichtbar, liegt er in einer weißtransluzenten Box am unteren Bildrand.
+- Bild- und Headerhöhe können im Customizer unter **Design → Customizer → Layout** eingestellt werden (Beitragsbild: 100–1200 Pixel, Header: 40–300 Pixel).
 
 ## To‑Do / Empfehlungen
 - Ergänzen von Templates: `single.php`, `page.php`, `404.php`, `archive.php`

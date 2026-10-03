@@ -4,11 +4,16 @@ Theme URI: https://familie-herbst.net/ahx/
 Author: Alexander Herbst
 Author URI: https://ahx.familie-herbst.net/
 Description: Ein einfaches, responsives Lean-Theme mit Navigation bis Ebene 2.
-Version: v1.5.0
+Version: v1.6.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ahx_wp_lean
 */
+
+:root {
+    --post-featured-image-height: 320px;
+    --site-header-height: 80px;
+}
 
 /* Allgemeines Styling */
 body {
@@ -46,7 +51,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: var(--site-header-height);
     padding: 10px 20px;
+    box-sizing: border-box;
     background: #333;
     color: white;
 }
@@ -86,6 +93,36 @@ body {
     box-sizing: border-box;
 }
 
+.post-featured-image {
+    position: relative;
+    width: 100%;
+    height: var(--post-featured-image-height);
+    overflow: hidden;
+}
+
+.post-featured-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.post-featured-image-title {
+    --module-outer-margin: 24px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px 0;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.post-featured-image-title .entry-title {
+    margin: 0 var(--module-outer-margin);
+}
+
 /* Inhalt-Module in .entry-content flexibel steuern */
 .entry-content {
     --module-outer-margin: 24px;
@@ -115,7 +152,8 @@ body {
 }
 
 @media (max-width: 768px) {
-    .entry-content {
+    .entry-content,
+    .post-featured-image-title {
         --module-outer-margin: 16px;
     }
 }
