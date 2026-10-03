@@ -4,6 +4,7 @@
 function ahx_lean_theme_setup() {
     add_theme_support('title-tag');
     add_theme_support('menus');
+    add_theme_support('post-thumbnails');
     load_theme_textdomain('ahx_wp_lean', get_stylesheet_directory() . '/languages');
     register_nav_menus([
         'main-menu' => __('Hauptmenü', 'ahx_wp_lean'),
