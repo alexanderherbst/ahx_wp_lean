@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> data-ahx-color-mode="<?php echo esc_attr(ahx_lean_color_mode()); ?>">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#007bff">
+    <?php if (ahx_lean_color_mode() === 'auto') : ?>
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+    <?php else : ?>
+        <meta name="theme-color" content="<?php echo ahx_lean_color_mode() === 'dark' ? '#1c1c1e' : '#ffffff'; ?>">
+    <?php endif; ?>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">

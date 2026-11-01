@@ -38,6 +38,73 @@ function ahx_lean_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'ahx_lean_enqueue_assets');
 
+function ahx_lean_color_mode($user_id = 0) {
+    $user_id = $user_id ?: get_current_user_id();
+    $mode = $user_id ? get_user_meta($user_id, 'ahx_lean_color_mode', true) : '';
+    return in_array($mode, ['auto', 'light', 'dark'], true) ? $mode : 'auto';
+}
+
+function ahx_lean_color_mode_profile($user) {
+    $mode = ahx_lean_color_mode($user->ID);
+    ?>
+    <h2><?php esc_html_e('Frontend-Darstellung', 'ahx_wp_lean'); ?></h2>
+    <?php wp_nonce_field('ahx_lean_color_mode_' . $user->ID, 'ahx_lean_color_mode_nonce'); ?>
+    <table class="form-table" role="presentation">
+        <tr>
+            <th><label for="ahx_lean_color_mode"><?php esc_html_e('Farbmodus', 'ahx_wp_lean'); ?></label></th>
+            <td>
+                <select name="ahx_lean_color_mode" id="ahx_lean_color_mode" aria-describedby="ahx-lean-color-mode-description">
+                    <?php foreach ([
+                        'auto' => __('Automatisch (Systemeinstellung)', 'ahx_wp_lean'),
+                        'light' => __('Hell', 'ahx_wp_lean'),
+                        'dark' => __('Dunkel', 'ahx_wp_lean'),
+                    ] as $value => $label) : ?>
+                        <option value="<?php echo esc_attr($value); ?>" <?php selected($mode, $value); ?>><?php echo esc_html($label); ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <p class="description" id="ahx-lean-color-mode-description"><?php esc_html_e('Gilt nach dem Speichern für das Frontend inklusive Mediathek, nicht für die WordPress-Verwaltung.', 'ahx_wp_lean'); ?></p>
+            </td>
+        </tr>
+    </table>
+    <?php
+}
+add_action('show_user_profile', 'ahx_lean_color_mode_profile');
+add_action('edit_user_profile', 'ahx_lean_color_mode_profile');
+
+function ahx_lean_validate_color_mode($errors, $update, $user) {
+    if (!isset($_POST['ahx_lean_color_mode'])) {
+        return;
+    }
+    $nonce = $_POST['ahx_lean_color_mode_nonce'] ?? '';
+    if (!$update || !current_user_can('edit_user', $user->ID)
+        || !is_string($nonce) || !wp_verify_nonce(wp_unslash($nonce), 'ahx_lean_color_mode_' . $user->ID)) {
+        $errors->add('ahx_lean_color_mode_permission', __('Die Farbmodus-Auswahl konnte nicht verifiziert werden. Bitte das Profil neu laden.', 'ahx_wp_lean'));
+    }
+    if (!is_string($_POST['ahx_lean_color_mode'])
+        || !in_array(wp_unslash($_POST['ahx_lean_color_mode']), ['auto', 'light', 'dark'], true)) {
+        $errors->add('ahx_lean_color_mode_invalid', __('Bitte einen gültigen Farbmodus auswählen.', 'ahx_wp_lean'));
+    }
+}
+add_action('user_profile_update_errors', 'ahx_lean_validate_color_mode', 10, 3);
+
+function ahx_lean_save_color_mode($user_id) {
+    if (!isset($_POST['ahx_lean_color_mode'])) {
+        return;
+    }
+    $errors = new WP_Error();
+    ahx_lean_validate_color_mode($errors, true, (object) ['ID' => $user_id]);
+    if ($errors->has_errors()) {
+        wp_die($errors);
+    }
+    $mode = wp_unslash($_POST['ahx_lean_color_mode']);
+    if (get_user_meta($user_id, 'ahx_lean_color_mode', true) !== $mode
+        && update_user_meta($user_id, 'ahx_lean_color_mode', $mode) === false) {
+        wp_die(esc_html__('Der Farbmodus konnte nicht gespeichert werden. Bitte erneut versuchen.', 'ahx_wp_lean'));
+    }
+}
+add_action('personal_options_update', 'ahx_lean_save_color_mode');
+add_action('edit_user_profile_update', 'ahx_lean_save_color_mode');
+
 // Menü: Login/Logout/Profil an `main-menu` anhängen (Barrierefreiheit & WP-Nav kompatibel)
 function ahx_nav_menu_items($items, $args) {
     if (isset($args->theme_location) && $args->theme_location === 'main-menu') {

@@ -3,6 +3,42 @@ msgstr ""
 "Project-Id-Version: ahx_wp_lean\n"
 "POT-Creation-Date: 2026-03-15 11:44+0000\n"
 "MIME-Version: 1.0\n\"\n"Content-Type: text/plain; charset=UTF-8\n\"\n"Content-Transfer-Encoding: 8bit\n\"\n
+#: functions.php
+msgid "Frontend-Darstellung"
+msgstr ""
+
+#: functions.php
+msgid "Farbmodus"
+msgstr ""
+
+#: functions.php
+msgid "Automatisch (Systemeinstellung)"
+msgstr ""
+
+#: functions.php
+msgid "Hell"
+msgstr ""
+
+#: functions.php
+msgid "Dunkel"
+msgstr ""
+
+#: functions.php
+msgid "Gilt nach dem Speichern für das Frontend inklusive Mediathek, nicht für die WordPress-Verwaltung."
+msgstr ""
+
+#: functions.php
+msgid "Die Farbmodus-Auswahl konnte nicht verifiziert werden. Bitte das Profil neu laden."
+msgstr ""
+
+#: functions.php
+msgid "Bitte einen gültigen Farbmodus auswählen."
+msgstr ""
+
+#: functions.php
+msgid "Der Farbmodus konnte nicht gespeichert werden. Bitte erneut versuchen."
+msgstr ""
+
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "1. Basis & Kontakt"
 msgstr ""
@@ -438,4 +474,3 @@ msgstr ""
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "Zusätzlich setzen wir technisch notwendige Cookies, damit zentrale Funktionen der Website zuverlässig laufen."
 msgstr ""
-

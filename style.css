@@ -4,7 +4,7 @@ Theme URI: https://familie-herbst.net/ahx/
 Author: Alexander Herbst
 Author URI: https://ahx.familie-herbst.net/
 Description: Ein einfaches, responsives Lean-Theme mit Navigation bis Ebene 2.
-Version: v1.6.0
+Version: v1.7.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ahx_wp_lean
@@ -13,6 +13,44 @@ Text Domain: ahx_wp_lean
 :root {
     --post-featured-image-height: 320px;
     --site-header-height: 80px;
+    --ahx-color-bg: #fff;
+    --ahx-color-surface: #f2f2f7;
+    --ahx-color-text: #1d1d1f;
+    --ahx-color-muted: #626268;
+    --ahx-color-border: #d2d2d7;
+    --ahx-color-accent: #0066cc;
+    --ahx-color-on-accent: #fff;
+    --ahx-color-header: #333;
+    --ahx-color-title-overlay: rgba(255, 255, 255, 0.8);
+    color-scheme: light;
+}
+
+:root[data-ahx-color-mode="dark"] {
+    --ahx-color-bg: #1c1c1e;
+    --ahx-color-surface: #2c2c2e;
+    --ahx-color-text: #f5f5f7;
+    --ahx-color-muted: #aeaeb2;
+    --ahx-color-border: #48484a;
+    --ahx-color-accent: #65b5ff;
+    --ahx-color-on-accent: #101014;
+    --ahx-color-header: #242426;
+    --ahx-color-title-overlay: rgba(28, 28, 30, 0.8);
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-ahx-color-mode="light"]) {
+        --ahx-color-bg: #1c1c1e;
+        --ahx-color-surface: #2c2c2e;
+        --ahx-color-text: #f5f5f7;
+        --ahx-color-muted: #aeaeb2;
+        --ahx-color-border: #48484a;
+        --ahx-color-accent: #65b5ff;
+        --ahx-color-on-accent: #101014;
+        --ahx-color-header: #242426;
+        --ahx-color-title-overlay: rgba(28, 28, 30, 0.8);
+        color-scheme: dark;
+    }
 }
 
 /* Allgemeines Styling */
@@ -20,8 +58,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: white;
-    color: black;
+    background: var(--ahx-color-bg);
+    color: var(--ahx-color-text);
+}
+
+a {
+    color: var(--ahx-color-accent);
+}
+
+:where(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]),
+select, textarea) {
+    background-color: var(--ahx-color-surface);
+    color: var(--ahx-color-text);
+    border: 1px solid var(--ahx-color-border);
+}
+
+:is(a, button, input, select, textarea):focus-visible {
+    outline: 2px solid var(--ahx-color-accent);
+    outline-offset: 2px;
+}
+
+hr, table, th, td {
+    border-color: var(--ahx-color-border);
+}
+
+pre, code {
+    background-color: var(--ahx-color-surface);
 }
 
 /* Skip link: nur sichtbar beim Fokus (A11Y) */
@@ -39,8 +101,8 @@ body {
     top: 10px;
     width: auto;
     height: auto;
-    background: #0073aa;
-    color: #fff;
+    background: var(--ahx-color-accent);
+    color: var(--ahx-color-on-accent);
     padding: 8px 12px;
     z-index: 10000;
     text-decoration: none;
@@ -54,7 +116,7 @@ body {
     height: var(--site-header-height);
     padding: 10px 20px;
     box-sizing: border-box;
-    background: #333;
+    background: var(--ahx-color-header);
     color: white;
 }
 .site-footer {
@@ -116,7 +178,7 @@ body {
     left: 0;
     padding: 16px 0;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--ahx-color-title-overlay);
 }
 
 .post-featured-image-title .entry-title {
@@ -191,7 +253,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 8px 0;
-    background: #333;
+    background: var(--ahx-color-header);
     z-index: 1000000;
 }
 
@@ -241,14 +303,14 @@ body {
         position: absolute;
         top: 50px;
         right: 0;
-        background: white;
+        background: var(--ahx-color-bg);
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         flex-direction: column;
         width: 200px;
     }
 
     .menu-list a {
-        color: black;
+        color: var(--ahx-color-text);
         padding: 10px;
         display: block;
     }
@@ -265,7 +327,7 @@ body {
 
     .menu-list .sub-menu a,
     .menu-list .children a {
-        color: black;
+        color: var(--ahx-color-text);
         padding: 8px 10px;
     }
 
@@ -288,7 +350,7 @@ body {
 }
 
 .overlay-content {
-    background: rgba(255,255,255,0.9);
+    background: var(--ahx-color-bg);
     border-radius: 12px;
     padding: 30px 40px;
     text-align: center;
@@ -299,18 +361,18 @@ body {
     width: 60px;
     margin-bottom: 20px;
     font-size: 40px;
-    color: #0073aa; /* WordPress primary color */
+    color: var(--ahx-color-accent);
 }
 
 .overlay-text {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--ahx-color-text);
 }
 
 .overlay-spinner {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #0073aa;
+    border: 5px solid var(--ahx-color-surface);
+    border-top-color: var(--ahx-color-accent);
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -332,9 +394,9 @@ body {
 .privacy-group {
     margin: 24px 0;
     padding: 16px 18px;
-    border: 1px solid #dcdcdc;
+    border: 1px solid var(--ahx-color-border);
     border-radius: 8px;
-    background: #fafafa;
+    background: var(--ahx-color-surface);
 }
 
 .privacy-group h2 {
@@ -348,5 +410,5 @@ body {
 .privacy-disclaimer {
     margin-top: 18px;
     padding-top: 12px;
-    border-top: 1px dashed #c9c9c9;
+    border-top: 1px dashed var(--ahx-color-border);
 }

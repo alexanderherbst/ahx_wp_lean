@@ -12,6 +12,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: AHX WP i18n\n"
 
+#: functions.php
+msgid "Frontend-Darstellung"
+msgstr "Frontend appearance"
+
+#: functions.php
+msgid "Farbmodus"
+msgstr "Color mode"
+
+#: functions.php
+msgid "Automatisch (Systemeinstellung)"
+msgstr "Automatic (system setting)"
+
+#: functions.php
+msgid "Hell"
+msgstr "Light"
+
+#: functions.php
+msgid "Dunkel"
+msgstr "Dark"
+
+#: functions.php
+msgid "Gilt nach dem Speichern für das Frontend inklusive Mediathek, nicht für die WordPress-Verwaltung."
+msgstr "After saving, applies to the frontend including the media library, not to WordPress administration."
+
+#: functions.php
+msgid "Die Farbmodus-Auswahl konnte nicht verifiziert werden. Bitte das Profil neu laden."
+msgstr "The color mode selection could not be verified. Please reload the profile."
+
+#: functions.php
+msgid "Bitte einen gültigen Farbmodus auswählen."
+msgstr "Please select a valid color mode."
+
+#: functions.php
+msgid "Der Farbmodus konnte nicht gespeichert werden. Bitte erneut versuchen."
+msgstr "The color mode could not be saved. Please try again."
+
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "1. Basis & Kontakt"
 msgstr "1. Basic Info & Contact"
@@ -447,4 +483,3 @@ msgstr "For the display of interactive maps, content from external providers may
 #: C:/wamp64/www/wordpress/wp-content/themes/ahx_wp_lean/functions.php
 msgid "Zusätzlich setzen wir technisch notwendige Cookies, damit zentrale Funktionen der Website zuverlässig laufen."
 msgstr "We also set technically necessary cookies so that core functions of the website run reliably."
-

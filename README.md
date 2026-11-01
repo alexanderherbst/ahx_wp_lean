@@ -8,6 +8,31 @@ Kleines, responsives WordPress-Theme mit Fokus auf Einfachheit, Zugänglichkeit 
 - `wp_nav_menu()`-Support mit Fallback auf Seitenstruktur (depth=2)
 - Enqueue-Optimierungen (Cache-Busting via `filemtime`, Skript im Footer)
 - Automatisch angelegtes Default-Menu beim Theme-Aktivieren
+- Benutzerbezogener heller/dunkler Farbmodus mit automatischer Systemeinstellung
+
+## Farbmodus
+Unter **Profil bearbeiten → Frontend-Darstellung → Farbmodus** kann jeder
+angemeldete Benutzer **Automatisch (Systemeinstellung)**, **Hell** oder
+**Dunkel** auswählen und mit dem Profil speichern. Die Einstellung gilt für
+das Frontend, nicht für die WordPress-Verwaltung. Gäste und Profile ohne
+gespeicherte Auswahl folgen der Systemeinstellung. Im automatischen Modus
+werden Änderungen der Systemeinstellung auch auf einer geöffneten Seite
+übernommen.
+
+Die Auswahl wird als Benutzermetadatum `ahx_lean_color_mode` gespeichert.
+Das HTML-Element erhält `data-ahx-color-mode`; gemeinsame CSS-Variablen
+`--ahx-color-*` steuern Seitenhintergrund, Schrift, Navigation, Formulare und
+Theme-Flächen. AHX WP Media übernimmt diese Farben für Galerie, Filterdialog
+und Einzelansicht. Andere Plugins mit fest vorgegebenen Farben müssen diese
+Variablen selbst verwenden. Seitencaches müssen angemeldete Benutzer
+ausnehmen, damit keine fremde Profilansicht ausgeliefert wird.
+
+Profiltests ohne Änderungen an vorhandenen Benutzerdaten:
+
+```powershell
+$env:AHX_WORDPRESS_LOAD = 'C:\path\to\wordpress\wp-load.php'
+php -d xdebug.mode=off .\tests\color-mode.php
+```
 
 ## Installation
 1. Ordner `ahx_wp_lean` in `wp-content/themes/` kopieren.
@@ -24,7 +49,7 @@ Kleines, responsives WordPress-Theme mit Fokus auf Einfachheit, Zugänglichkeit 
 
 - Übersetzungen: `load_theme_textdomain()` ist vorhanden; PO/POT-Dateien legen Sie in `languages/` ab.
 - Für Produktionsbetrieb: CSS/JS minifizieren und Bilder optimieren (WebP, srcset).
-- Das Beitragsbild erscheint auf statischen Seiten (`page.php`) als vollbreite Grafik. Die Höhe lässt sich über `--post-featured-image-height` in `style.css` festlegen (Standard: `320px`); das Bild wird bei Bedarf mittig zugeschnitten. Ist der Seitentitel sichtbar, liegt er in einer weißtransluzenten Box am unteren Bildrand.
+- Das Beitragsbild erscheint auf statischen Seiten (`page.php`) als vollbreite Grafik. Die Höhe lässt sich über `--post-featured-image-height` in `style.css` festlegen (Standard: `320px`); das Bild wird bei Bedarf mittig zugeschnitten. Ist der Seitentitel sichtbar, liegt er in einer zum Farbmodus passenden transluzenten Box am unteren Bildrand.
 - Bild- und Headerhöhe können im Customizer unter **Design → Customizer → Layout** eingestellt werden (Beitragsbild: 100–1200 Pixel, Header: 40–300 Pixel).
 
 ## To‑Do / Empfehlungen
